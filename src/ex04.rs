@@ -1,6 +1,6 @@
 pub fn isPrime(n: u32) -> bool {
     let mut divs = 1;
-    for i in 1..n {
+    for i in 1..((n/2)+1) {
         if (n % i == 0) {
             divs += 1;
         }
@@ -14,7 +14,7 @@ pub fn isPrime(n: u32) -> bool {
 
 pub fn nth(n: u32) -> u32 {
     let mut count = 0;
-    let mut start = 1;
+    let mut start = 2;
     let mut prime = 0;
 
     while (count != n) {
