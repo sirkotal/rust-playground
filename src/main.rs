@@ -1,5 +1,5 @@
-mod ex04;
+mod ex05;
 
 fn main() {
-    println!("{}", ex04::nth(10000));
+    println!("{}", ex05::is_armstrong_number(153));
 }
