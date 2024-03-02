@@ -1,5 +1,5 @@
-mod ex06;
+mod ex07;
 
 fn main() {
-    println!("{}", ex06::difference(5));
+    println!("{:?}", ex07::factors(901255));
 }
