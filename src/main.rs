@@ -1,5 +1,5 @@
-mod ex05;
+mod ex06;
 
 fn main() {
-    println!("{}", ex05::is_armstrong_number(153));
+    println!("{}", ex06::difference(5));
 }
