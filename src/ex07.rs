@@ -1,12 +1,13 @@
 pub fn factors(n: u64) -> Vec<u64> {
     let mut primes: Vec<u64> = Vec::new();
-    let mut p = 2;
+    primes.push(2);
+    primes.push(3);
+    let mut p = 1;
     let mut res: Vec<u64> = Vec::new();
 
-    while (p < ((n/2)+1)) {
-        if (n % p == 0) {
-            primes.push(p);
-        }
+    while (((6 * p) - 1) < n) {
+        primes.push((6 * p) - 1);
+        primes.push((6 * p) + 1);
         p += 1;
     }
 
