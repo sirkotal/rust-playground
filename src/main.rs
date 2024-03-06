@@ -1,5 +1,5 @@
-mod ex08;
+mod ex09;
 
 fn main() {
-    println!("{:?}", ex08::is_leap_year(1900));
+    println!("{}", ex09::sing(8, 6));
 }
