@@ -18,7 +18,7 @@ impl Clock {
 
         let mut t = h + m;
 
-        if (t < 0) {
+        while (t < 0) {
             t += (24 * 60);
         }
 
@@ -35,7 +35,7 @@ impl Clock {
     pub fn add_minutes(&self, minutes: i32) -> Self {
         let mut t = (self.h * 60) + self.m + minutes;
 
-        if (t < 0) {
+        while (t < 0) {
             t += (24 * 60);
         }
 
