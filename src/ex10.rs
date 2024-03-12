@@ -18,6 +18,10 @@ impl Clock {
 
         let mut t = h + m;
 
+        if (t < 0) {
+            t += (24 * 60);
+        }
+
         h = t / 60;
         m = t - (h * 60);
 
@@ -29,8 +33,13 @@ impl Clock {
     }
 
     pub fn add_minutes(&self, minutes: i32) -> Self {
-        let mut t = (self.h * 60) + self.m;
-        t += minutes;
+        let mut t = (self.h * 60) + self.m + minutes;
+
+        if (t < 0) {
+            t += (24 * 60);
+        }
+
+        // println!("{}", t);
         
         let mut h = t / 60;
         let mut m = t - (h * 60);
